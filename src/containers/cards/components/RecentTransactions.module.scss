@@ -1,0 +1,91 @@
+.collapseWrapper {
+  background: #f5f9ff;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.panel {
+}
+
+.header {
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  > img {
+    margin-right: 4px;
+  }
+}
+
+.transactionsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px 0;
+}
+
+.viewAll {
+  height: 60vh;
+  overflow-y: auto;
+}
+
+.transactionItem {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 12px;
+}
+
+.iconWrapper {
+  background: #f0f6ff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+}
+
+.detailsWrapper {
+  flex: 1;
+}
+
+.topRow {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.bottomRow {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 4px;
+  font-size: 12px;
+  color: #888;
+}
+
+.date {
+  font-size: 12px;
+}
+
+.type {
+  color: #294ebd;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.viewAllButton {
+  margin-top: 16px;
+  padding: 12px;
+  text-align: center;
+  background: #e8ffee;
+  color: #00c853;
+  font-weight: 500;
+  border-radius: 10px;
+  cursor: pointer;
+}

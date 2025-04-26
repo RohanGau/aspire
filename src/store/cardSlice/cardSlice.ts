@@ -18,6 +18,10 @@ const cardSlice = createSlice({
       state.cards = [];
       localStorage.removeItem(LOCAL_STORAGE_CARD_KEY);
     },
+    deleteCard: (state, action: PayloadAction<string>) => {
+      state.cards = state.cards.filter((card) => card.id !== action.payload);
+      localStorage.setItem(LOCAL_STORAGE_CARD_KEY, JSON.stringify(state.cards));
+    },
   },
   extraReducers: (builder) => {
     builder
@@ -41,7 +45,7 @@ const cardSlice = createSlice({
   },
 });
 
-export const { clearCards } = cardSlice.actions;
+export const { clearCards, deleteCard } = cardSlice.actions;
 
 export const fetchCards = createAsyncThunk('cards/fetchCards', async () => {
   const cards = await fetchCardApi();

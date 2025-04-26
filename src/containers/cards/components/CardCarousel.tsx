@@ -7,13 +7,28 @@ import { Card } from '../../../interface/types';
 import CreditCard from '../../../components/card/CreditCard';
 import { Pagination } from 'swiper/modules';
 import { GreenEye } from '../../../assets/icons';
+import { Skeleton } from 'antd';
 
 interface CardCarouselProps {
   cards: Card[];
+  isFetching: boolean;
+  activeIndex: number;
+  setActiveIndex: (index: number) => void;
 }
 
-const CardCarousel: React.FC<CardCarouselProps> = ({ cards }) => {
+const CardCarousel: React.FC<CardCarouselProps> = ({
+  cards,
+  isFetching,
+  activeIndex,
+  setActiveIndex,
+}) => {
   const [showDetails, setShowDetails] = useState(false);
+  if (isFetching) {
+    return (
+      <Skeleton.Button className={styles.skeleton} active size={'large'} shape={'square'} block />
+    );
+  }
+
   return (
     <div className={styles.carouselWrapper}>
       <div className={styles.toggleButton}>
@@ -27,6 +42,7 @@ const CardCarousel: React.FC<CardCarouselProps> = ({ cards }) => {
         pagination={{ dynamicBullets: true }}
         modules={[Pagination]}
         className="mySwiper"
+        onSlideChange={(swiper) => setActiveIndex(swiper.activeIndex)}
       >
         {cards.map((card) => (
           <SwiperSlide key={card.id}>

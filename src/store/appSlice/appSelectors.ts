@@ -1,4 +1,4 @@
-import { RootState } from "..";
+import { RootState } from '..';
 
 export const selectRoomId = (state: RootState) => state.app.roomId;
 export const selectNickname = (state: RootState) => state.app.nickname;
@@ -11,14 +11,13 @@ export const selectCurrentSessionId = (state: RootState) => state.app.currentSes
 export const selectUserId = (state: RootState) => state.app.userId;
 
 export const selectChatRoomData = (state: RootState) => ({
-    messages: state.app.messages,
-    nickname: state.app.nickname,
-    userIcon: state.app.userIcon,
-    usersTyping: state.app.usersTyping,
-    roomId: state.app.roomId
-  });
+  messages: state.app.messages,
+  nickname: state.app.nickname,
+  userIcon: state.app.userIcon,
+  usersTyping: state.app.usersTyping,
+  roomId: state.app.roomId,
+});
 
-  
-  export const selectLobbyData = (state: RootState) => ({
-    isConnected: state.app.isConnected
-  });
+export const selectLobbyData = (state: RootState) => ({
+  isConnected: state.app.isConnected,
+});

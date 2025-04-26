@@ -1,0 +1,67 @@
+.balanceCard {
+  color: black;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  // gap: 16px;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__label {
+    font-size: 14px;
+
+    color: #222222;
+  }
+
+  &__priceContainer {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__currency {
+    background-color: #01d167;
+    height: auto;
+    height: 24pt;
+    width: 40pt;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4pt;
+    margin-right: 12px;
+    color: #f0f0f0;
+    margin-top: 4px;
+  }
+
+  &__currencyText {
+    font-size: 26pt;
+    display: flex;
+    align-items: center;
+  }
+  &__buttonContainer {
+    display: flex;
+    align-items: center;
+  }
+
+  &__cta {
+    background-color: #325baf;
+    color: #ffffff;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    height: fit-content;
+    transition: all 0.2s ease;
+
+    &:hover {
+      background-color: #4e74c0;
+    }
+  }
+}

@@ -1,19 +1,25 @@
 import styles from './BalanceSection.module.scss';
+import { Skeleton } from 'antd';
 
 interface BalanceSectionProps {
+  isLoading: boolean;
   balance: number;
   currency: string;
   onhandleAddCard: () => void;
 }
 
-const BalanceSection = ({ balance, currency, onhandleAddCard }: BalanceSectionProps) => {
+const BalanceSection = ({ isLoading, balance, currency, onhandleAddCard }: BalanceSectionProps) => {
   return (
     <div className={styles.balanceCard}>
       <div className={styles.balanceCard__header}>
         <p className={styles.balanceCard__label}>Available Balance</p>
         <div className={styles.balanceCard__priceContainer}>
           <span className={styles.balanceCard__currency}>{currency}</span>
-          <h2 className={styles.balanceCard__currencyText}>{balance.toLocaleString()}</h2>
+          {isLoading ? (
+            <Skeleton.Button active size={'default'} shape={'square'} />
+          ) : (
+            <h2 className={styles.balanceCard__currencyText}>{balance.toLocaleString()}</h2>
+          )}
         </div>
       </div>
 

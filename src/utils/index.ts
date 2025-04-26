@@ -1,5 +1,6 @@
 import { Account, Card, Credit, Home, Payments } from '../assets/icons';
 import { SidebarItem } from '../interface/types';
+import { DeactivateCard, FreezeCard, GPay, ReplaceCard, SetSpendLimit } from '../assets/icons';
 
 export const LOCAL_STORAGE_CARD_KEY = 'cards';
 
@@ -34,6 +35,14 @@ export const sidebarItems: SidebarItem[] = [
     icon: Account,
     path: '/settings',
   },
+];
+
+export const actionsItems = [
+  { icon: FreezeCard, label: 'Freeze card' },
+  { icon: SetSpendLimit, label: 'Set spend limit' },
+  { icon: GPay, label: 'Add to GPay' },
+  { icon: ReplaceCard, label: 'Replace card' },
+  { icon: DeactivateCard, label: 'Cancel card' },
 ];
 
 export const generateRandomCardNumber = () => {

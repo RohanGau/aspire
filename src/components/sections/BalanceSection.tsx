@@ -17,9 +17,7 @@ const BalanceSection = ({ balance, currency }: BalanceSectionProps) => {
           className={styles.balanceCard__toggle}
           onClick={() => setVisible((prev) => !prev)}
           aria-label="Toggle Balance Visibility"
-        >
-          {/* {visible ? <FaEye /> : <FaEyeSlash />} */}
-        </button>
+        ></button>
       </div>
 
       <div className={styles.balanceCard__amount}>

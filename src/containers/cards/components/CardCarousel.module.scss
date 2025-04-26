@@ -1,0 +1,72 @@
+.carouselWrapper {
+}
+
+.toggleButton {
+  margin-bottom: 16px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+
+  button {
+    > img {
+      margin-right: 4px;
+    }
+
+    color: #3ac569;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+  }
+}
+
+.card {
+  background-color: #3ac569;
+  color: white;
+  border-radius: 16px;
+  padding: 24px;
+  height: 200px;
+  position: relative;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  .logo {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .cardName {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 30px;
+  }
+
+  .cardNumber {
+    letter-spacing: 4px;
+    font-size: 18px;
+    margin-top: 8px;
+  }
+
+  .cardDetails {
+    margin-top: 12px;
+    font-size: 14px;
+  }
+
+  .cardDetailsCvv {
+    margin-left: 30px;
+  }
+
+  .visaLogo {
+    text-align: end;
+    font-weight: bold;
+    font-size: 18px;
+  }
+}

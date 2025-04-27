@@ -95,6 +95,87 @@ yarn add antd
 
 ---
 
+## 🧪 Testing with Jest
+
+This project uses **Jest** for unit testing.
+
+### Jest Commands
+
+- **Run tests**:
+
+```bash
+npm test
+# or
+yarn test
+```
+
+- **Run tests in watch mode**:
+
+```bash
+npm run test:watch
+# or
+yarn test:watch
+```
+
+- **Run tests with coverage**:
+
+```bash
+npm run test:coverage
+# or
+yarn test:coverage
+```
+
+### Jest Setup
+
+Make sure you have the following configuration for Jest in your `package.json` or in a separate Jest config file:
+
+```json
+"jest": {
+  "preset": "react",
+  "testEnvironment": "jsdom",
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.ts"]
+}
+```
+
+#### Mocks
+
+If you're using libraries such as `react-redux` or components with `window.matchMedia`, ensure they are properly mocked in your tests to avoid errors like:
+
+1. **Mocking `window.matchMedia` for AntD's responsive observer**:
+
+```ts
+// In src/setupTests.ts
+Object.defineProperty(window, 'matchMedia', {
+  writable: true,
+  value: jest.fn().mockImplementation((query) => ({
+    matches: false,
+    media: query,
+    onchange: null,
+    addListener: jest.fn(),
+    removeListener: jest.fn(),
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
+    dispatchEvent: jest.fn(),
+  })),
+});
+```
+
+2. **Mocking `useSelector` and `useDispatch` from `react-redux`**:
+
+```ts
+// In your test files
+import * as redux from 'react-redux';
+
+jest.mock('react-redux', () => ({
+  useSelector: jest.fn(),
+  useDispatch: jest.fn(),
+}));
+```
+
+Make sure to mock these before rendering the component in your tests.
+
+---
+
 ## 📌 To-Do / Improvements (Optional)
 
 - Add **animation** for smooth height transition on expanding.

@@ -1,0 +1,85 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`BalanceSection matches snapshot when loading 1`] = `
+<DocumentFragment>
+  <div
+    class="balanceCard"
+  >
+    <div
+      class="balanceCard__header"
+    >
+      <p
+        class="balanceCard__label"
+      >
+        Available Balance
+      </p>
+      <div
+        class="balanceCard__priceContainer"
+      >
+        <span
+          class="balanceCard__currency"
+        >
+          S$
+        </span>
+        <div
+          class="ant-skeleton ant-skeleton-element ant-skeleton-active css-dev-only-do-not-override-1v5z42l"
+        >
+          <span
+            class="ant-skeleton-button ant-skeleton-button-square"
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="balanceCard__buttonContainer"
+    >
+      <button
+        class="balanceCard__cta"
+      >
+        New Card
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`BalanceSection matches snapshot when not loading 1`] = `
+<DocumentFragment>
+  <div
+    class="balanceCard"
+  >
+    <div
+      class="balanceCard__header"
+    >
+      <p
+        class="balanceCard__label"
+      >
+        Available Balance
+      </p>
+      <div
+        class="balanceCard__priceContainer"
+      >
+        <span
+          class="balanceCard__currency"
+        >
+          S$
+        </span>
+        <h2
+          class="balanceCard__currencyText"
+        >
+          12,345.67
+        </h2>
+      </div>
+    </div>
+    <div
+      class="balanceCard__buttonContainer"
+    >
+      <button
+        class="balanceCard__cta"
+      >
+        New Card
+      </button>
+    </div>
+  </div>
+</DocumentFragment>
+`;

@@ -1,4 +1,4 @@
-import { SessionChatMessage } from 'teleparty-websocket-lib';
+// import { SessionChatMessage } from 'teleparty-websocket-lib';
 
 export interface User {
   nickname: string;
@@ -11,7 +11,7 @@ export interface ChatRoomState {
   user: User | null;
 }
 
-export interface ChatMessage extends SessionChatMessage {
+export interface ChatMessage {
   // Add any additional properties you might need
 }
 
@@ -28,7 +28,7 @@ export interface AppState {
   hasJoined: boolean;
   userIcon?: string;
   isConnected: boolean;
-  messages: SessionChatMessage[];
+  messages: [];
   usersTyping: string[];
   currentSessionId: string | null;
 }

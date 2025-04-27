@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { SwiperSlide, Swiper } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/pagination';
 import styles from './CardCarousel.module.scss';
 import { Card } from '../../../interface/types';
 import CreditCard from '../../../components/card/CreditCard';
 import { Pagination } from 'swiper/modules';
 import { GreenEye } from '../../../assets/icons';
 import { Skeleton } from 'antd';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 interface CardCarouselProps {
   cards: Card[];
@@ -16,12 +16,7 @@ interface CardCarouselProps {
   setActiveIndex: (index: number) => void;
 }
 
-const CardCarousel: React.FC<CardCarouselProps> = ({
-  cards,
-  isFetching,
-  activeIndex,
-  setActiveIndex,
-}) => {
+const CardCarousel: React.FC<CardCarouselProps> = ({ cards, isFetching, setActiveIndex }) => {
   const [showDetails, setShowDetails] = useState(false);
   if (isFetching) {
     return (

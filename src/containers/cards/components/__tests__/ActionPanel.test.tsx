@@ -1,6 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
 import ActionsPanel from '../ActionsPanel';
-import { Skeleton } from 'antd';
 import { actionsItems } from '../../../../utils';
 
 // Mock the utils module

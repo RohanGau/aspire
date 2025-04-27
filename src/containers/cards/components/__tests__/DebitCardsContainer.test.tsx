@@ -1,5 +1,5 @@
-import { render, screen, fireEvent } from '@testing-library/react';
-import DebitCardsContainer, { DebitCardsProps } from '../DebitCardsContainer';
+import { render, screen } from '@testing-library/react';
+import DebitCardsContainer from '../DebitCardsContainer';
 import * as redux from 'react-redux';
 Object.defineProperty(window, 'matchMedia', {
   writable: true,
@@ -43,8 +43,8 @@ describe('DebitCardsContainer', () => {
   ];
 
   beforeEach(() => {
-    (redux.useSelector as jest.Mock).mockReturnValue(cards);
-    (redux.useDispatch as jest.Mock).mockReturnValue(mockDispatch);
+    (redux.useSelector as unknown as jest.Mock).mockReturnValue(cards);
+    (redux.useDispatch as unknown as jest.Mock).mockReturnValue(mockDispatch);
   });
 
   afterEach(() => {

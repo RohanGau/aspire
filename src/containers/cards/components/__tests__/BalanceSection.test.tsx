@@ -1,8 +1,5 @@
-import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-// import BalanceSection from './BalanceSection';
 import BalanceSection from '../BalanceSection';
-import { Skeleton } from 'antd';
 
 describe('BalanceSection', () => {
   const mockHandleAddCard = jest.fn();

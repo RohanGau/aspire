@@ -2,7 +2,6 @@ import reducer, { clearCards, deleteCard, fetchCards, addCard } from '../cardSli
 import { AnyAction } from '@reduxjs/toolkit';
 import { CardState, Card } from '../../../interface/types';
 import { LOCAL_STORAGE_CARD_KEY } from '../../../utils';
-import { fetchCardApi, addCardApi } from '../../../api/cardApi';
 
 // Mock localStorage
 beforeEach(() => {
